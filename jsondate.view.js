@@ -2,7 +2,7 @@ sap.ui.jsview("jsondate.Index", {
 
 	/** Specifies the Controller belonging to this View. 
 	* In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
-	* @memberOf date.Index
+	* @memberOf jsondate.Index
 	*/ 
 	getControllerName : function() {
 		return "jsondate.Index";
@@ -10,7 +10,7 @@ sap.ui.jsview("jsondate.Index", {
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
 	* Since the Controller is given to this method, its event handlers can be attached right away. 
-	* @memberOf date.Index
+	* @memberOf jsondate.Index
 	*/ 
 	createContent : function(oController) {
 		
