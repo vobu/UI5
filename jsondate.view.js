@@ -46,12 +46,36 @@ sap.ui.jsview("jsondate.Index", {
 			valueFormat: "yyyy-MM-dd"
 		});
 		
+		var oData = {
+				date: sJsonDate
+		};
+		var oJsonModel = new sap.ui.model.json.JSONModel();
+		oJsonModel.setData(oData);
+		var oDateTimeInput3 = new sap.m.DateTimeInput({
+			type: sap.m.DateTimeInputType.Date,
+			displayFormat: "dd - M - yy",
+			dateValue: {
+				path: "/date",
+				formatter: function(sDate) {
+					if(sJsonDate) {
+						/\/(.+)\//.exec(sDate);
+						return eval("new " + RegExp.$1);
+//						var sNumber = sJsonDate.replace(/[^0-9]+/g,'');
+//						var iNumber = sNumber * 1; //trick seventeen
+//						return new Date(iNumber);
+					}
+				}
+			}
+		});
+		oDateTimeInput3.setModel(oJsonModel);
+		
 		
  		return new sap.m.Page({
 			title: "JSON Model Date Formatting",
 			content: [
 			          oDateTimeInput1,
-			          oDateTimeInput2
+			          oDateTimeInput2,
+					  oDateTimeInput3
 			]
 		});
 	}
