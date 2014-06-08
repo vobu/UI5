@@ -57,10 +57,10 @@ sap.ui.jsview("jsondate.Index", {
 			dateValue: {
 				path: "/date",
 				formatter: function(sDate) {
-					if(sJsonDate) {
+					if(sDate) {
 						/\/(.+)\//.exec(sDate);
 						return eval("new " + RegExp.$1);
-//						var sNumber = sJsonDate.replace(/[^0-9]+/g,'');
+//						var sNumber = sDate.replace(/[^0-9]+/g,'');
 //						var iNumber = sNumber * 1; //trick seventeen
 //						return new Date(iNumber);
 					}
