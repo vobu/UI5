@@ -1,0 +1,29 @@
+{
+  "name": "cf-in-your-pocket",
+  "version": "0.0.1",
+  "description": "sample local SAP CP cf-style dev setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vobu/UI5.git"
+  },
+  "keywords": [
+    "SAP",
+    "CP",
+    "Cloud",
+    "Foundry",
+    "approuter"
+  ],
+  "author": "Volker Buzek <volker.buzek@js-soft.com>",
+  "license": "Beerware License <https://fedoraproject.org/wiki/Licensing/Beerware>",
+  "bugs": {
+    "url": "https://github.com/vobu/UI5/issues"
+  },
+  "homepage": "https://github.com/vobu/UI5#readme",
+  "dependencies": {
+    "@sap/approuter": "^6.0.1"
+  }
+}
